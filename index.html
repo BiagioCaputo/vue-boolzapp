@@ -33,8 +33,8 @@
                     <!-- Barra profilo utente -->
                     <div id="profile-container" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-2 px-2">
-                            <img src="img/avatar_io.jpg" alt="avatar">
-                            <span><b>Nome Utente</b></span>
+                            <img :src="`img/avatar${data.user.avatar}.jpg`" alt="avatar_image">
+                            <span><b>{{data.user.name}}</b></span>
                         </div>
                         <div class="d-flex align-items-center gap-3 grey-color px-3">
                             <i class="fa-solid fa-rotate-right fa-xl"></i>
