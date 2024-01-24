@@ -5,6 +5,7 @@ const {createApp} = Vue;
 const app = createApp({
     name:"Boolzapp",
     data: () => ({
+        data,
     }),
      
     computed: {

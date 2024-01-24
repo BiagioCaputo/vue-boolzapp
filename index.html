@@ -65,7 +65,14 @@
                 </div>
 
                 <!-- Parte inferiore della Side-bar -->
-                <div class="bottom-side-bar"></div>
+                <div class="bottom-side-bar">
+                    <ul>
+                        <li class="d-flex gap-4 p-3 border-top" v-for="contact in data.contacts">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="avatar_image">
+                            <span><b>{{contact.name}}</b></span>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
             
@@ -88,7 +95,8 @@
                 </div>
 
                 <!-- Pannello chat -->
-                <div id="chat-container"></div>
+                <div id="chat-container">
+                </div>
                 
 
                 <!-- Pannello controlli messaggio -->
