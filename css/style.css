@@ -90,3 +90,20 @@ main{
     height: 100px;
     background-color:#F3EEEA;
 }
+
+.received{
+    padding: 10px 20px;
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.sent{
+    padding: 10px 20px;
+    background-color: white;
+    align-self: flex-start;
+}
+
+.date-message{
+    color:#C3C5BB;
+    font-size: 12px;
+}
