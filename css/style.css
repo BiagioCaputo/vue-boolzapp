@@ -1,0 +1,10 @@
+body{
+    background-image: linear-gradient( #009688 200px, #DBDBD2 0);
+}
+
+#boolzap-container{
+    width: 80%;
+    height: 95%;
+    border:2px solid black;
+    background-color: white;
+}
