@@ -27,7 +27,7 @@ img{
 
 /*********************** Side-Bar ********************************/
 #side-bar{
-    flex-basis: 380px;
+    flex-basis: 400px;
     background-color:white;
     flex-shrink: 0; /*per non farla stringere a causa del flex grow del main*/
     height: 100%;
