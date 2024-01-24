@@ -24,21 +24,59 @@
 <body>
     <div id="root" class="vh-100 d-flex align-items-center justify-content-center">
         <div id="boolzap-container" class="d-flex">
+            <!-- Side-bar -->
             <div id="side-bar">
-                <div class="upper-side-bar"></div>
-                <div class="bottom-side-bar"></div>
-            </div>
-            <main>
-                <div id="contact-container"></div>
-                <div id="chat-container">
-                    <p>Naruto[a] is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story is told in two parts: the first is set in Naruto's pre-teen years (volumes 1–27), and the second in his teens (volumes 28–72). The series is based on two one-shot manga by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mention in Shueisha's monthly Hop Step Award the following year, and Naruto (1997).
 
-                        Naruto was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from September 1999 to November 2014, with its chapters collected in 72 tankōbon volumes. Part I of the manga was adapted into an anime television series by Pierrot and Aniplex, which ran for 220 episodes from October 2002 to February 2007 on TV Tokyo; the English dub of the series aired on Cartoon Network and YTV from September 2005 to December 2009. A second series, which adapts material from Part II of the manga, is titled Naruto: Shippuden and ran on TV Tokyo for 500 episodes from February 2007 to March 2017. The English dub of Shippuden was broadcast on Disney XD in the United States from October 2009 to November 2011, airing the first 98 episodes before eventually switching over to Adult Swim's Toonami programming block in January 2014, starting over from the first episode. After Disney XD removed the series from broadcast, Viz Media began streaming new English dubbed episodes on their streaming service Neon Alley in from December 2012 to March 2016, starting at episode 99 and ending at episode 338 due to the service's shutdown. Besides the anime television series, Pierrot also developed 11 animated films and 12 original video animations (OVAs). Other Naruto-related merchandise includes light novels, video games, and trading cards developed by several companies.
-                        
-                        Viz Media licensed the manga and anime for North American production and serialized Naruto in their digital Weekly Shonen Jump magazine. The anime series began airing in the United States and Canada in 2005, and in the United Kingdom and Australia in 2006 and 2007, respectively. The films and most OVAs from the series were also released by Viz, with the first film premiering in movie theaters. The story of Naruto continues with Naruto's son, Boruto Uzumaki, in Boruto: Naruto Next Generations: Boruto wishes to create his own ninja way instead of following his father's.
-                        
-                        Naruto is one of the best-selling manga series of all time, having 250 million copies in circulation worldwide in 47 countries and regions, with 153 million copies in Japan alone and remaining 97 million copies elsewhere. It has become one of Viz Media's best-selling manga series; their English translations of the volumes have appeared on USA Today and The New York Times bestseller list several times, and the seventh volume won a Quill Award in 2006. Reviewers praised the manga's character development, storylines, and action sequences, though some felt the latter slowed the story down. Critics noted that the manga, which has a coming-of-age theme, makes use of cultural references from Japanese mythology and Confucianism.</p>
+                <!-- Parte superiore della Side-bar -->
+                <div class="upper-side-bar">
+                    <div id="profile-container" class="d-flex justify-content-between align-items-center px-2">
+                        <div class="d-flex align-items-center gap-2 px-2">
+                            <img src="img/avatar_io.jpg" alt="avatar">
+                            <span><b>Nome Utente</b></span>
+                        </div>
+                        <div class="d-flex align-items-center gap-4 grey-color">
+                            <i class="fa-solid fa-rotate-right fa-xl"></i>
+                            <i class="fa-solid fa-message fa-xl"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+                        </div>
+                    </div>
+
+                    <!-- Toggle per l'arrivo delle notifiche -->
+                    <div id="notification-container" class="d-flex gap-3 align-items-center px-3">
+                        <div class="bg-white rounded-circle p-3">
+                            <i class="fa-solid fa-bell-slash fa-xl" style="color:#8EDAFC;"></i>
+                        </div>
+                        <div>
+                            <span><b>Ricevi notifiche di nuovi messaggi</b></span>
+                            <a href="#" class="d-block">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+
+                    <!-- Search bar per le chat -->
+                    <div id="search-bar-container" class="p-2">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Parte inferiore della Side-bar -->
+                <div class="bottom-side-bar"></div>
+
+            </div>
+            
+            <!-- Main -->
+            <main>
+                <!-- Pannello utente con il quale si sta interagendo nella chat -->
+                <div id="contact-container"></div>
+
+                <!-- Pannello chat -->
+                <div id="chat-container"></div>
+                
+
+                <!-- Pannello controlli messaggio -->
                 <div id="controls-container"></div>
             </main>
         </div>

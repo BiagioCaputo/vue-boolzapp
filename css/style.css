@@ -3,6 +3,10 @@ body{
     background-image: linear-gradient( #009688 200px, #DBDBD2 0);
 }
 
+a{
+    color:grey;
+}
+
 #boolzap-container{
     width: 85%;
     height: 95%;
@@ -10,21 +14,47 @@ body{
     background-color: white;
 }
 
+img{
+    max-width: 30%;
+    border-radius: 50%;
+}
+/*********************** Utilities ********************************/
+
+.grey-color{
+    color:#B1B1B1;
+}
+
+
 /*********************** Side-Bar ********************************/
 #side-bar{
-    flex-basis: 350px;
-    background-color:black;
+    flex-basis: 380px;
+    background-color:white;
     flex-shrink: 0; /*per non farla stringere a causa del flex grow del main*/
     height: 100%;
+    border-right: 1px solid blue;
 }
 
 .upper-side-bar{
-    height: 300px;
-    background-color: red;
+    height: 250px;
+    background-color: #EAEAEA;
+}
+
+#profile-container{
+    height:40%;
+}
+
+#notification-container{
+    height:40%;
+    background-color: #8EDAFC;
+}
+
+#search-bar-container{
+    height:20%;
 }
 
 .bottom-side-bar{
-    height: calc(100% - 300px);
+    height: calc(100% - 250px);
+    overflow: auto;
 }
 
 /*********************** Main ********************************/
@@ -40,16 +70,17 @@ main{
     right: 0;
     width: 100%;
     height:100px;
-    background-color: aquamarine;
+    background-color: #EAEAEA;
 }
 
 #chat-container{
     height: calc(100% - 220px);
     overflow: auto;
+    background-image: url('../img/mine.jpg');
     
 }
 
 #controls-container{
     height: 120px;
-    background-color: yellow;
+    background-color:#F3EEEA;
 }
