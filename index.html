@@ -72,14 +72,44 @@
             <!-- Main -->
             <main>
                 <!-- Pannello utente con il quale si sta interagendo nella chat -->
-                <div id="contact-container"></div>
+                <div id="contact-container" class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <img src="img/avatar_1.jpg" alt="avatar">
+                        <div>
+                            <span><b>Michele</b></span>
+                            <span class="d-block grey-color">Ultimo accesso oggi alle</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4 grey-color px-4">
+                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                        <i class="fa-solid fa-paperclip fa-xl"></i>
+                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+                    </div>
+                </div>
 
                 <!-- Pannello chat -->
                 <div id="chat-container"></div>
                 
 
                 <!-- Pannello controlli messaggio -->
-                <div id="controls-container"></div>
+                <div id="controls-container" class="d-flex align-items-center">
+
+                    <!-- Pannello selezione emoticon -->
+                    <div id="emoticon-box" class="d-flex justify-content-center col-1">
+                        <i class="fa-regular fa-face-smile fa-xl" style="color:#6B7376"></i>
+                    </div>
+
+                    <!-- Pannello per la composizione di un messaggio -->
+                    <div id="typing-box" class="col-10">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                    </div>
+
+                    <!-- Pannello registrazione messaggio -->
+                    <div id="recorder-box" class="d-flex justify-content-center col-1">
+                        <i class="fa-solid fa-microphone fa-xl" style="color:#6B7376"></i>
+                    </div>
+
+                </div>
             </main>
         </div>
 
