@@ -40,7 +40,7 @@ const app = createApp({
         addAnswer(currentContact){
             const newAnswer = {
                 id: new Date().toISOString(),
-                date:new Date().toISOString(),
+                date:new Date().toLocaleString(),
                 text:"ok",
                 status:'received'
             }
@@ -51,7 +51,7 @@ const app = createApp({
         addMessage(currentContact){
             const newMessage = {
                 id: new Date().toISOString(),
-                date:new Date().toISOString(),
+                date:new Date().toLocaleString(),
                 text:this.newMessageText,
                 status:'sent'
             }

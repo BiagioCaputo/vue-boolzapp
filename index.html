@@ -86,9 +86,9 @@
             <!-- Main -->
             <main>
                 <!-- Pannello utente con il quale si sta interagendo nella chat -->
-                <div id="contact-container" class="d-flex justify-content-between align-items-center">
+                <header id="contact-container" class="d-flex justify-content-between align-items-center">
                     <div class="d-flex gap-2 align-items-center">
-                        <figure class="pt-3">
+                        <figure class="pt-3 ps-2">
                             <img :src="getAvatarPic(currentContact.avatar)" alt="avatar">
                         </figure>
                         <div>
@@ -101,10 +101,10 @@
                         <i class="fa-solid fa-paperclip fa-xl"></i>
                         <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
                     </div>
-                </div>
+                </header>
 
                 <!-- Pannello chat -->
-                <div id="chat-container" class="p-4">
+                <section id="chat-container" class="p-4">
                     <ul class="d-flex flex-column p-4 row-gap-3">
                         <li v-for="message in currentContact.messages" :class="{sent: message.status === 'sent', received: message.status === 'received'}">
                             <p class="mb-0">{{message.text}}</p>
@@ -112,11 +112,11 @@
                         </li>
 
                     </ul>
-                </div>
+                </section>
                 
 
                 <!-- Pannello controlli messaggio -->
-                <div id="controls-container" class="d-flex align-items-center container-fluid">
+                <footer id="controls-container" class="d-flex align-items-center container-fluid">
 
                     <!-- Pannello selezione emoticon -->
                     <div id="emoticon-box" class="d-flex justify-content-center col-1">
@@ -133,7 +133,7 @@
                         <i class="fa-solid fa-microphone fa-xl" style="color:#6B7376"></i>
                     </div>
 
-                </div>
+                </footer>
             </main>
         </div>
 

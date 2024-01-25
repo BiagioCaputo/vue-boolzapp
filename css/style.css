@@ -48,7 +48,7 @@ figure:hover{
     background-color:white;
     flex-shrink: 0; /*per non farla stringere a causa del flex grow del main*/
     height: 100%;
-    border-right: 1px solid blue;
+    border-right: 1px solid lightgray;
 }
 
 .upper-side-bar{
