@@ -24,6 +24,17 @@ img{
     max-width: 80px;
     border-radius: 50%;
 }
+
+figure:hover{
+    cursor: pointer;
+}
+
+.bottom-side-bar li:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    
+}
+
 /*********************** Utilities ********************************/
 
 .grey-color{
