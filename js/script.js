@@ -27,7 +27,18 @@ const app = createApp({
             return `img/avatar${avatar}.jpg`;
         },
         
-        //funzione per aggiungere un messaggio alla chat attuale
+        //funzione per creare una risposta automatica 
+        addAnswer(currentContact){
+            const newAnswer = {
+                id: new Date().toISOString(),
+                date:new Date().toISOString(),
+                text:"ok",
+                status:'received'
+            }
+            currentContact.messages.push(newAnswer);
+        },
+        
+        //funzione per aggiungere un messaggio alla chat attuale e ricevere una risposta automatica dopo 1 secondo
         addMessage(currentContact){
             const newMessage = {
                 id: new Date().toISOString(),
@@ -38,9 +49,14 @@ const app = createApp({
             currentContact.messages.push(newMessage);
     
             this.newMessageText = "";
+
+            setTimeout(()=>{
+                this.addAnswer(currentContact)
+             },1000);
         },
-        
-    }
+
+          
+    },
 });
 
 
