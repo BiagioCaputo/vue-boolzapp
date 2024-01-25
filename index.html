@@ -33,8 +33,8 @@
                     <!-- Barra profilo utente -->
                     <div id="profile-container" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-2 px-2">
-                            <img :src="`img/avatar${data.user.avatar}.jpg`" alt="avatar_image">
-                            <span><b>{{data.user.name}}</b></span>
+                            <img :src="getAvatarPic(user.avatar)" alt="user.name">
+                            <span><b>{{user.name}}</b></span>
                         </div>
                         <div class="d-flex align-items-center gap-3 grey-color px-3">
                             <i class="fa-solid fa-rotate-right fa-xl"></i>
@@ -66,12 +66,15 @@
 
                 <!-- Parte inferiore della Side-bar -->
                 <div class="bottom-side-bar">
+
+                    <!-- Contacts-list -->
                     <ul>
-                        <li class="d-flex gap-4 p-3 border-top" v-for="contact in data.contacts">
-                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="avatar_image">
-                            <span><b>{{contact.name}}</b></span>
+                        <li class="d-flex gap-4 p-3 border-top" v-for="contact in data.contacts" :key="contact.id">
+                            <img :src="getAvatarPic(contact.avatar)" alt="user.name">
+                            <span><b>{{contact.name}}</b></span> 
                         </li>
                     </ul>
+
                 </div>
 
             </div>
@@ -98,15 +101,15 @@
                 <div id="chat-container" class="p-4">
                     <ul class="d-flex flex-column p-4 row-gap-3">
                         <li class="received rounded">
-                            <span>Hai portato a spasso il cane?</span>
+                            <p class="mb-0">Hai portato a spasso il cane?</p>
                             <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
                         </li>
                         <li class="received rounded">
-                            <span>Hai portato a spasso il cane?</span>
+                            <p>Hai portato a spasso il cane?</p>
                             <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
                         </li>
                         <li class="sent rounded">
-                            <span>Hai portato a spasso il cane?</span>
+                            <p>Hai portato a spasso il cane?</p>
                             <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
                         </li>
 
@@ -115,7 +118,7 @@
                 
 
                 <!-- Pannello controlli messaggio -->
-                <div id="controls-container" class="d-flex align-items-center">
+                <div id="controls-container" class="d-flex align-items-center container-fluid">
 
                     <!-- Pannello selezione emoticon -->
                     <div id="emoticon-box" class="d-flex justify-content-center col-1">
