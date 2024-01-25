@@ -9,7 +9,8 @@ const app = createApp({
         user: data.user,
         contacts: data.contacts,
         activeId: 1,
-        activeContact: {}
+        activeContact: {},
+        newMessageText:"",
 
     }),
     computed: {
@@ -24,6 +25,19 @@ const app = createApp({
         //funzione per impostare le immagini degli utenti
         getAvatarPic (avatar) {
             return `img/avatar${avatar}.jpg`;
+        },
+        
+        //funzione per aggiungere un messaggio
+        addMessage(){
+            const newMessage = {
+                id: new Date().toISOString(),
+                date:new Date().toISOString(),
+                text:this.newMessageText,
+                status:'sent'
+            }
+            this.messages.push(newMessage);
+    
+            this.newMessageText = "";
         },
         
     }
