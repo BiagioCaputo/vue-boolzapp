@@ -35,6 +35,11 @@ figure:hover{
     
 }
 
+select{
+    border: none;
+    max-width: 20px;
+    background:transparent;
+}
 /*********************** Utilities ********************************/
 
 .grey-color{

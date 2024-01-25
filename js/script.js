@@ -10,7 +10,6 @@ const app = createApp({
         user: data.user,
         contacts: data.contacts,
         activeId: 1,
-        activeContact: {},
         newMessageText:"",
         searcheduser:""
 
@@ -63,6 +62,14 @@ const app = createApp({
                 this.addAnswer(currentContact)
              },1000);
         },
+
+        removeMessage(id){
+            this.currentContact.messages = this.currentContact.messages.filter(message => id !== message.id);
+        },
+
+        hello(){
+            console.log("hello");
+        }
 
           
     },
