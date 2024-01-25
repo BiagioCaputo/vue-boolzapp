@@ -71,7 +71,7 @@
 
                     <!-- Contacts-list -->
                     <ul>
-                        <li class="d-flex gap-4 p-3 border-top" v-for="contact in data.contacts" :key="contact.id" @click="activeId = contact.id">
+                        <li class="d-flex gap-4 p-3 border-top" v-for="contact in contacts" :key="contact.id" @click="activeId = contact.id">
                             <figure>
                                 <img :src="getAvatarPic(contact.avatar)" alt="user.name">
                             </figure>
@@ -106,17 +106,9 @@
                 <!-- Pannello chat -->
                 <div id="chat-container" class="p-4">
                     <ul class="d-flex flex-column p-4 row-gap-3">
-                        <li class="received rounded">
-                            <p class="mb-0">Hai portato a spasso il cane?</p>
-                            <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
-                        </li>
-                        <li class="received rounded">
-                            <p>Hai portato a spasso il cane?</p>
-                            <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
-                        </li>
-                        <li class="sent rounded">
-                            <p>Hai portato a spasso il cane?</p>
-                            <span class="d-block text-end date-message">10/01/2020 16:15:22</span class="d-block text-end">
+                        <li v-for="message in currentContact.messages" :class="{sent: message.status === 'sent', received: message.status === 'received'}">
+                            <p class="mb-0">{{message.text}}</p>
+                            <span class="d-block text-end date-message">{{message.date}}</span class="d-block text-end">
                         </li>
 
                     </ul>

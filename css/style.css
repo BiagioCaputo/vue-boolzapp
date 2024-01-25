@@ -102,16 +102,18 @@ main{
     background-color:#F3EEEA;
 }
 
-.received{
+.sent{
     padding: 10px 20px;
     background-color: #D5F9BA;
     align-self: flex-end;
+    border-radius: 15px;
 }
 
-.sent{
+.received{
     padding: 10px 20px;
     background-color: white;
     align-self: flex-start;
+    border-radius: 15px;
 }
 
 .date-message{
