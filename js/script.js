@@ -7,7 +7,8 @@ const app = createApp({
     data: () => ({
         data,
         user: data.user,
-        contacts: data.contacts
+        contacts: data.contacts,
+        
     }),
      
     computed: {

@@ -33,7 +33,9 @@
                     <!-- Barra profilo utente -->
                     <div id="profile-container" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-2 px-2">
-                            <img :src="getAvatarPic(user.avatar)" alt="user.name">
+                            <figure class="pt-3">
+                                <img :src="getAvatarPic(user.avatar)" alt="user.name">
+                            </figure>
                             <span><b>{{user.name}}</b></span>
                         </div>
                         <div class="d-flex align-items-center gap-3 grey-color px-3">
@@ -70,7 +72,9 @@
                     <!-- Contacts-list -->
                     <ul>
                         <li class="d-flex gap-4 p-3 border-top" v-for="contact in data.contacts" :key="contact.id">
-                            <img :src="getAvatarPic(contact.avatar)" alt="user.name">
+                            <figure>
+                                <img :src="getAvatarPic(contact.avatar)" alt="user.name">
+                            </figure>
                             <span><b>{{contact.name}}</b></span> 
                         </li>
                     </ul>
@@ -84,7 +88,9 @@
                 <!-- Pannello utente con il quale si sta interagendo nella chat -->
                 <div id="contact-container" class="d-flex justify-content-between align-items-center">
                     <div class="d-flex gap-2 align-items-center">
-                        <img src="img/avatar_1.jpg" alt="avatar">
+                        <figure class="pt-3">
+                            <img src="img/avatar_1.jpg" alt="avatar">
+                        </figure>
                         <div>
                             <span><b>Michele</b></span>
                             <span class="d-block grey-color">Ultimo accesso oggi alle</span>
