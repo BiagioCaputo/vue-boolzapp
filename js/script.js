@@ -27,15 +27,15 @@ const app = createApp({
             return `img/avatar${avatar}.jpg`;
         },
         
-        //funzione per aggiungere un messaggio
-        addMessage(){
+        //funzione per aggiungere un messaggio alla chat attuale
+        addMessage(currentContact){
             const newMessage = {
                 id: new Date().toISOString(),
                 date:new Date().toISOString(),
                 text:this.newMessageText,
                 status:'sent'
             }
-            this.messages.push(newMessage);
+            currentContact.messages.push(newMessage);
     
             this.newMessageText = "";
         },

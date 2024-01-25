@@ -125,7 +125,7 @@
 
                     <!-- Pannello per la composizione di un messaggio -->
                     <div id="typing-box" class="col-10">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model.trim="newMessageText" @keyup.enter = "addMessage(currentContact)">
                     </div>
 
                     <!-- Pannello registrazione messaggio -->
