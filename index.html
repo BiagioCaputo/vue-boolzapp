@@ -78,7 +78,10 @@
                             <figure>
                                 <img :src="getAvatarPic(contact.avatar)" alt="user.name">
                             </figure>
-                            <span><b>{{contact.name}}</b></span> 
+                            <div>
+                                <span><b>{{contact.name}}</b></span> 
+                                <span class="d-block grey-color">{{getLastElement(messagesReceived(contact)).text}}...</span>
+                            </div>
                         </li>
                     </ul>
 
@@ -96,7 +99,7 @@
                         </figure>
                         <div>
                             <span><b>{{currentContact.name}}</b></span>
-                            <span class="d-block grey-color">Ultimo accesso oggi alle {{getLastElement(messagesReceived).date}}</span>
+                            <span class="d-block grey-color">Ultimo accesso oggi alle {{getLastElement(messagesReceived(currentContact)).date}}</span>
                         </div>
                     </div>
                     <div class="d-flex gap-4 grey-color px-4">

@@ -16,22 +16,16 @@ const app = createApp({
     }),
 
     computed: {
-        //metodo per ricavare il contatto attualmente attivo nella lista
+        //funnzione per ricavare il contatto attualmente attivo nella lista
         currentContact() {
             return this.contacts.find(contact => contact.id === this.activeId);
         },
         
-        //metodo che mi restituisce un array di contatti contenenti la stringa di caratteri inserita dall'utente
+        //funzione che mi restituisce un array di contatti contenenti la stringa di caratteri inserita dall'utente
         searchedConversations() {
             const searchedUser = this.searcheduser.toLowerCase();
 
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(searchedUser));
-        },
-
-
-        //metodo che mi restituisce un array con soltanto messaggi ricevuti nell'account corrente
-        messagesReceived () {
-            return this.currentContact.messages.filter(message => message.status === 'received');
         },
 
         
@@ -74,6 +68,11 @@ const app = createApp({
         //funzione che elimina un messaggio ricevendo come parametro il suo id nell'account corrente
         removeMessage(id){
             this.currentContact.messages = this.currentContact.messages.filter(message => id !== message.id);
+        },
+        
+        //Funzione che mi restituisce un array con elementi che hanno lo status dei messaggi impostato a ricevuto
+        messagesReceived (array) {
+            return array.messages.filter(message => message.status === 'received');
         },
         
         //funzione che seleziona l'ultimo elemento di un array
