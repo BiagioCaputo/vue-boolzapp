@@ -9,7 +9,7 @@ const app = createApp({
         data,
         user: data.user,
         contacts: data.contacts,
-        activeId: 1,
+        activeId: null,
         newMessageText:"",
         searcheduser:""
 
@@ -87,6 +87,10 @@ const app = createApp({
 
           
     },
+    //salvo il primo oggetto dell'array contacts nell'active id per mostrarlo all'avvio della pagina
+    created() {
+        this.activeId = this.contacts[0].id;
+    }
 });
 
 
