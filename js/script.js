@@ -26,7 +26,15 @@ const app = createApp({
             const searchedUser = this.searcheduser.toLowerCase();
 
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(searchedUser));
-        }
+        },
+
+
+        //metodo che mi restituisce un array con soltanto messaggi ricevuti nell'account corrente
+        messagesReceived () {
+            return this.currentContact.messages.filter(message => message.status === 'received');
+        },
+
+        
     },
 
     methods: {
@@ -62,14 +70,21 @@ const app = createApp({
                 this.addAnswer(currentContact)
              },1000);
         },
-
+        
+        //funzione che elimina un messaggio ricevendo come parametro il suo id nell'account corrente
         removeMessage(id){
             this.currentContact.messages = this.currentContact.messages.filter(message => id !== message.id);
         },
-
-        hello(){
-            console.log("hello");
+        
+        //funzione che seleziona l'ultimo elemento di un array
+        getLastElement(array){
+            return array[array.length - 1];
         }
+
+
+        
+
+        
 
           
     },
